@@ -1,0 +1,21 @@
+<% layout('layout.html') -%>
+<style type="text/css">
+    form#send-message { display: none; }
+    section#nicknames { width: 300px; float: right; }
+    textarea#message { width: 300px; height: 100px; }
+    section#messages p strong { margin-right: 5px; }
+</style>
+<p id="count"> <%= title %></p>
+<form id="set-nickname">
+    <label for="nickname">Nickname:</label>
+    <textarea type="text" name="nickname" id="nickname" ></textarea>
+    <input id="sendName" type="submit" />
+</form>
+<section id="nicknames"></section>
+<form id="message-form" action="#">
+    <textarea id="message" rows="4" cols="30"></textarea>
+    <input id=send type="submit" value="Send message" />
+</form>
+<div class="chatContent"></div>
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script src="javascripts/index.js"></script>
